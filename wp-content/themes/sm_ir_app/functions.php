@@ -1,17 +1,30 @@
 <?php 
+
+/**
+ * 
+ * *Calling the custom-post-type.php from partials folder
+ * 
+ */
+require get_template_directory(). '/partials/custom-post-types.php';
+
+
+/**
+ * 
+ * *Adding Featured Image Support for all post
+ * 
+ */
+add_theme_support( 'post-thumbnails' );
+
+/* Edcel  */
+
 require get_template_directory() . '/assets/bootstrap-navwalker.php';
-
-
 
 function load_css() {
 	wp_register_style('bootstrap',get_template_directory_uri().'/assets/css/bootstrap.min.css', array(),false,'all');
 	wp_enqueue_style('bootstrap');
-
-
 }
 
 add_action('wp_enqueue_scripts','load_css');
-
 
 function load_js() {
 	wp_enqueue_script('jquery');
