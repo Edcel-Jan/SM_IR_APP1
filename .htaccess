@@ -5,11 +5,11 @@
 # Any changes to the directives between these markers will be overwritten.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /sm-ir-app/
+RewriteBase /first_project/sm_ir_app/wordpress/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /sm-ir-app/index.php [L]
+RewriteRule . /first_project/sm_ir_app/wordpress/index.php [L]
 </IfModule>
 
 # END WordPress

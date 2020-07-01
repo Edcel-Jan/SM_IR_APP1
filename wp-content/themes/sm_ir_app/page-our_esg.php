@@ -8,6 +8,7 @@ Template Name: Our ESG Culture
  ?>
 <?php get_header(); ?>
 	<div class="container">
+		<h4 id='content'></h4>
 		<?php 
 			// The Query
 			$the_query = new WP_Query( array( 'category_name' => 'sustainability','orderby'=>'ID','order'=>'DESC' ) );
@@ -22,7 +23,7 @@ Template Name: Our ESG Culture
 			        echo get_the_content();
 			    }
 			
-			} else {
+			}else {
 				echo '<p>No Post Found</p>';
 			}
 			/* Restore original Post Data */

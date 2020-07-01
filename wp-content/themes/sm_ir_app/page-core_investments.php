@@ -13,12 +13,11 @@ Template Name: Core Investments
 			$the_query = new WP_Query( array( 'category_name' => 'sm_investment','orderby'=>'ID','order'=>'DESC' ) );
 			 
 			// The Loop
-
 			if ( $the_query->have_posts() ) {
 			   
 			    while ( $the_query->have_posts() ) {
 			        echo $the_query->the_post();
-			        echo '<h4>'. get_the_title().'</h4>';
+			        	echo '<h4>'. get_the_title().'</h4>';
 			        echo get_the_content();
 			    }
 			
